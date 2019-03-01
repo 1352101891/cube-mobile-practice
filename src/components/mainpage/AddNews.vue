@@ -1,8 +1,8 @@
 <template>
   <div class="rightroot">
       <div class="wrap">
+        <h2>新增新闻</h2>
         <table class="table-wraper">
-          <caption><h2>新增新闻</h2></caption>
           <tr>
             <th>
              标题：<input class="input_title" v-model="title" type="text" placeholder="请输入3位字符以上的标题"/>
@@ -110,7 +110,7 @@ export default {
   height: 100%;
   position: relative; 
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-content: center;
   align-items: center;
   flex-direction: column;

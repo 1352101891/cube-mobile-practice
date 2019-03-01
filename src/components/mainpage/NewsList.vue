@@ -7,8 +7,9 @@
             {{errorMess}}
         </div>
       </div>
-      <table v-if="isSuccess" cellspacing="3" class="content">  
-          <caption><h2>博客列表</h2></caption>
+      
+      <h2  v-if="isSuccess" >博客列表</h2>
+      <table v-if="isSuccess" cellspacing="3" class="content">        
           <tr class="tr_title">
             <th class='th_title'>
               标题
@@ -93,9 +94,12 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .rightroot{
-  width: 100%;
+  width: 99%;
   height: 90%;
-  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
   align-items: center;
   position:absolute;
   overflow: auto;

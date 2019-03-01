@@ -128,7 +128,7 @@ h3 {
   margin: 40px 0 0;
 }
 .content{
-  width: 100%;
+  width: 99%;
   height: 90%;
   float: left;
   position: relative;
