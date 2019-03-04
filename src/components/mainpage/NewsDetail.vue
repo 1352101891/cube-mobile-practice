@@ -82,6 +82,7 @@ p{
     height: 30px;
     margin-left: 5%;
     margin-top: 5%;
+    text-align: center;
     line-height: 30px;
     background: #e3faf0;box-shadow: 5px 5px 20px #8cb4fd;
   }

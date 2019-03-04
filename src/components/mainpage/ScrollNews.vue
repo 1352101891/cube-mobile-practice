@@ -130,8 +130,7 @@ h3 {
 .content{
   width: 99%;
   height: 90%;
-  float: left;
-  position: relative;
+  position: absolute;
   display: flex;
   flex-direction: column; 
   align-items: center; 

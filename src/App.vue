@@ -21,6 +21,7 @@
 <script>
 // import { ENDED, LIVE, CONCERN } from './common/config/tabs'
 // import MatchList from './components/match-list'
+import { mapActions } from 'vuex'
 
 export default {
   name: 'app',
@@ -56,20 +57,37 @@ export default {
   },
   mounted () {
     this.$router.push('/first')
+    // this.gp(1000).then(r => console.log(r))
+    this.aa('测试')
   },
 
   computed: {
+    // 使用computed标识符，监听store的状态量
     currentTab: function () {
-      window.console.log('tab页面改变' + this.$store.currentTab)
+      window.console.log('tab页面改变' + this.$store.state.currentTab)
       return this.$store.state.currentTab
     }
   },
   watch: {
     currentTab: function (newVal, oldVal) {
       this.currentPage = newVal
+      this.switchTab(this.currentPage)
     }
   },
   methods: {
+    // 映射action,并且定义 action的别名，使用起来更方便
+    ...mapActions([
+      'actionA',
+      'delaySet',
+      'getPromise', // map `this.getPromise(time)` to `this.$store.dispatch('getPromise', time)`
+      'AsyncMid',
+      'AsyncTop'
+    ]),
+    ...mapActions({
+      gp: 'getPromise', // map 'this.gp(time) to this.getPromise(time)'
+      aa: 'AsyncTop'
+    }),
+
     switchTab (index) {
       if (this.currentPage === index) {
         return
@@ -107,7 +125,7 @@ export default {
   .navigator{ 
     position: absolute; 
     bottom: 0px;
-    height: 8%;
+    height: 10%;
     width: 100%;
     font-size: 15px;
   }
@@ -118,11 +136,12 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    align-content: center;
   }
   .app-li{
     text-align: center;
-    line-height: 60px;
-    height: 60px;
+    line-height: 50px;
+    height: 50px;
     max-width: 20%;
     font-size: 15px;
     width: 60px;
@@ -140,9 +159,9 @@ export default {
 
   .app-a{
     font-size: 10px;
-    line-height: 30px;
+    line-height: 20px;
     text-align: center;
-    height: 30px;
+    height: 20px;
     width: auto;
   }
   .active{
