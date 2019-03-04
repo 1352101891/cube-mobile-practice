@@ -103,7 +103,7 @@ export default {
 <style lang="stylus" scoped>
 @import '../../common/stylus/mixin.styl'
 #container
-  height: 90%
+  height: 92%
   width: 100%
   position:absolute
   text-align: center

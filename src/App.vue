@@ -125,7 +125,7 @@ export default {
   .navigator{ 
     position: absolute; 
     bottom: 0px;
-    height: 10%;
+    height: 8%;
     width: 100%;
     font-size: 15px;
   }

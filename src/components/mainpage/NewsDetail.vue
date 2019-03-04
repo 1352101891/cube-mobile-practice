@@ -44,7 +44,7 @@ export default {
  
 .rightroot{
   width: 100%;
-  height: 90%;
+  height: 92%;
   position: absolute;
 }
 

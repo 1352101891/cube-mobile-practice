@@ -129,7 +129,7 @@ h3 {
 }
 .content{
   width: 99%;
-  height: 90%;
+  height: 92%;
   position: absolute;
   display: flex;
   flex-direction: column; 

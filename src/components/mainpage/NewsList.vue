@@ -93,9 +93,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 .rightroot{
   width: 99%;
-  height: 90%;
+  height: 92%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

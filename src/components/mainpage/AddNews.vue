@@ -95,7 +95,7 @@ export default {
 <style scoped>
 .rightroot{
   width: 100%;
-  height: 90%;
+  height: 92%;
   align-items: center;
   position: absolute;
   display: flex;
