@@ -60,6 +60,8 @@ export default {
     // 请参考：https://lodash.com/docs#debounce
     this.debouncedSearch = _.debounce(this.searchResult, 500)
   },
+  mounted () {
+  },
   watch: {
     // 如果 `question` 发生改变，这个函数就会运行
     searchWord: function () {
@@ -99,10 +101,12 @@ export default {
     initMenu: function () {
       var that = this
       this.xRequest.getNewsChannel((result) => {
-        that.tabs = result.result
-        that.tabname = that.tabs[0]
         that.loading = false
-        window.console.log('getNewsChannel:', that.tabs)
+        that.tabs = result.result
+        that.$nextTick(() => {
+          that.tabname = that.tabs[0]
+        })
+        window.console.log('getNewsChannel:', that.tabs[0])
       })
     },
     // 回调方法

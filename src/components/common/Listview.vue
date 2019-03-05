@@ -47,8 +47,6 @@ export default {
   props: {
     keyword: String
   },
-  mounted () {
-  },
   watch: {
     keyword: function (newS, oldS) {
       if (newS !== oldS) {

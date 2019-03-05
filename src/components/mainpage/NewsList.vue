@@ -65,13 +65,7 @@ export default {
       vm.getData(0)
     })
   },
-  // 路由地址变化时
-  watch: {
-    $route (to, from) {
-      console(to.name + '->' + from.name)
-        // 执行ajax请求，但只希望在进入时请求，离开时不希望进行请求。
-    }
-  },
+
   methods: {
     getData: function (page) {
       var diskList = this.util.getNewsFromDisk()

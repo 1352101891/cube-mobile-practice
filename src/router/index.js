@@ -21,20 +21,35 @@ const routes = [
   { path: '/foo', component: Foo },
   { path: '/bar', component: Bar },
   { path: '/first',
-    component: firstpage
+    component: firstpage,
+    meta: {
+      keepAlive: true // 需要缓存
+    }
   },
   { path: '/second',
-    component: scrollnews
+    component: scrollnews,
+    meta: {
+      keepAlive: true // 需要缓存
+    }
   },
   { path: '/third',
-    component: newslist
+    component: newslist,
+    meta: {
+      keepAlive: true // 需要缓存
+    }
   },
   { path: '/fourth',
-    component: addnews
+    component: addnews,
+    meta: {
+      keepAlive: true // 需要缓存
+    }
   }, {
     path: '/fifth',
     name: 'fifth',
-    component: newsdetail
+    component: newsdetail,
+    meta: {
+      keepAlive: false // 不需要缓存
+    }
   }
 ]
 

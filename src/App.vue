@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-     <router-view></router-view>
+    <!-- 对特定的组件页面进行缓存，防止切换path之后重建页面 -->
+    <keep-alive>
+     <router-view v-if="this.$route.meta.keepAlive"></router-view>
+    </keep-alive>
+    <router-view v-if="!this.$route.meta.keepAlive"></router-view>
      <div class="navigator">
         <ul class="nav-list">
           <li class="app-li" v-for="(item, index) in tabList" :key="index"
@@ -10,8 +14,7 @@
                 <a class="app-a" v-bind:class="{active: currentPage === index}">
                   {{ item.txt }}
                 </a>
-            </div>
-           
+            </div> 
           </li>
         </ul>
       </div>
